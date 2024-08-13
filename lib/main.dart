@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:glasses/features/app_router.dart';
 import 'package:glasses/setup_locator.dart';
 
@@ -17,15 +18,21 @@ class GlassesApplication extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(
-      routerDelegate: _appRouter.delegate(),
-      routeInformationParser: _appRouter.defaultRouteParser(),
-      routeInformationProvider: _appRouter.routeInfoProvider(),
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: Colors.deepPurple,
+    return ScreenUtilInit(
+      designSize: const Size(390, 844),
+      minTextAdapt: true,
+      splitScreenMode: true,
+      enableScaleText: () => false,
+      child: MaterialApp.router(
+        routerDelegate: _appRouter.delegate(),
+        routeInformationParser: _appRouter.defaultRouteParser(),
+        routeInformationProvider: _appRouter.routeInfoProvider(),
+        theme: ThemeData(
+          colorScheme: ColorScheme.fromSeed(
+            seedColor: Colors.deepPurple,
+          ),
+          useMaterial3: true,
         ),
-        useMaterial3: true,
       ),
     );
   }

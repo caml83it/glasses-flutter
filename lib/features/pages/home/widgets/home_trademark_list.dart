@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:glasses/domain/entities/trademark_entity.dart';
-import 'package:glasses/features/home/bloc/home_bloc.dart';
+import 'package:glasses/features/pages/home/bloc/home_bloc.dart';
 
 class HomeTrademarkList extends StatelessWidget {
   const HomeTrademarkList({super.key});

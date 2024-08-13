@@ -26,8 +26,10 @@ dependencies:
   cached_network_image: ^3.4.0
   # for routing => https://pub.dev/packages/auto_route
   auto_route: ^9.2.0
+
   # for responsibility => https://pub.dev/packages/flutter_screenutil
   flutter_screenutil: ^5.9.3
+
   json_annotation: ^4.9.0
   # for creating api models => https://pub.dev/packages/json_annotation
   freezed_annotation: ^2.4.4
@@ -53,8 +55,8 @@ flutter:
   uses-material-design: true
   # To add assets to your application, add an assets section, like this:
   assets:
-    - resources/images/
-    - resources/svgs/
+    - assets/images/
+    - assets/svgs/
     - .env
 
   # An image asset can refer to one or more resolution-specific "variants", see

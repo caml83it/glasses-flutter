@@ -10,9 +10,10 @@ class AppRouter extends RootStackRouter {
   List<AutoRoute> get routes {
     return [
       AutoRoute(page: SignInRoute.page, path: '/sign-in'),
+      AutoRoute(page: SplashRoute.page, path: '/'),
       AutoRoute(
         page: MainRoute.page,
-        path: "/",
+        path: "/m",
         children: [
           AutoRoute(page: HomeRoute.page, path: 'home'),
           AutoRoute(page: ChatRoute.page, path: 'chat'),

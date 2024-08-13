@@ -2,7 +2,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:glasses/domain/entities/banner_entity.dart';
-import 'package:glasses/features/home/bloc/home_bloc.dart';
+import 'package:glasses/features/pages/home/bloc/home_bloc.dart';
 
 class BannerSlider extends StatelessWidget {
   const BannerSlider({super.key});

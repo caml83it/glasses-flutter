@@ -2,7 +2,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:glasses/features/feature_locator.dart';
-import 'package:glasses/features/signin/bloc/signin_bloc.dart';
+import 'package:glasses/features/pages/signin/bloc/signin_bloc.dart';
 import 'package:glasses/features/widgets/common/base_view.dart';
 
 @RoutePage()
@@ -43,7 +43,9 @@ class _SignInScreenState extends State<SignInScreen>
           Text("PASSWORD"),
           TextField(),
           ElevatedButton(
-            onPressed: () {},
+            onPressed: () {
+              _bloc.add(LoginRequestEvent());
+            },
             child: Text("SIGNIN"),
           ),
         ],

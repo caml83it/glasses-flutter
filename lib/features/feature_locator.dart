@@ -1,7 +1,7 @@
 import 'package:get_it/get_it.dart';
 import 'package:glasses/domain/domain_locator.dart';
-import 'package:glasses/features/home/bloc/home_bloc.dart';
-import 'package:glasses/features/signin/bloc/signin_bloc.dart';
+import 'package:glasses/features/pages/home/bloc/home_bloc.dart';
+import 'package:glasses/features/pages/signin/bloc/signin_bloc.dart';
 
 final featureLocator = GetIt.instance;
 
@@ -14,5 +14,9 @@ void setupFeatureLocator() {
     ),
   );
 
-  featureLocator.registerFactory<SignInBloc>(() => SignInBloc());
+  featureLocator.registerFactory<SignInBloc>(
+    () => SignInBloc(
+      loginUseCase: domainLocator(),
+    ),
+  );
 }

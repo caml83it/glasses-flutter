@@ -17,6 +17,9 @@ void setupDomainLocator() {
   );
 
   domainLocator.registerLazySingleton<LoginUseCase>(() {
-    return LoginUseCase(repository: dataLocator());
+    return LoginUseCase(
+      repository: dataLocator(),
+      localStorage: dataLocator(),
+    );
   });
 }
