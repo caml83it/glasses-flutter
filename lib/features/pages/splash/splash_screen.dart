@@ -1,6 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:glasses/features/app_router.gr.dart';
 import 'package:glasses/features/shared/ui_colors.dart';
 import 'package:glasses/features/shared/ui_sizes.dart';
 import 'package:glasses/features/shared/ui_svgs.dart';
@@ -11,9 +12,14 @@ import 'package:glasses/generated/l10n.dart';
 part 'splash_screen_mixin.dart';
 
 @RoutePage()
-class SplashScreen extends StatelessWidget with SplashScreenMixin {
+class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
 
+  @override
+  State<SplashScreen> createState() => _SplashScreenState();
+}
+
+class _SplashScreenState extends State<SplashScreen> with SplashScreenMixin {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -83,7 +89,9 @@ class SplashScreen extends StatelessWidget with SplashScreenMixin {
   }
 
   @override
-  void onLoginPressed() {}
+  void onLoginPressed() {
+    AutoRouter.of(context).push(const SignInRoute());
+  }
 
   @override
   void onRegisterPressed() {}

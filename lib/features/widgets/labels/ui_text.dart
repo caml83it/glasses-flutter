@@ -13,12 +13,15 @@ class UIText extends StatelessWidget {
 
   final FontWeight? fontWeight;
 
+  final FontStyle? fontStyle;
+
   const UIText({
     super.key,
     required this.title,
     this.titleColor,
     this.titleSize,
     this.fontWeight,
+    this.fontStyle,
   });
 
   @override
@@ -29,6 +32,7 @@ class UIText extends StatelessWidget {
         fontSize: titleSize ?? UISizes.font.sp14,
         color: titleColor ?? UIColors.black,
         fontWeight: fontWeight ?? FontWeight.normal,
+        fontStyle: fontStyle ?? FontStyle.normal,
       ),
     );
   }

@@ -8,28 +8,31 @@ class UIFullFillButton extends StatelessWidget {
   /// {@macro flutter.widgets.ProxyWidget.child}
   final Widget? child;
 
-  /// Customizes this button's appearance.
-  /// Null by default.
-  final ButtonStyle? style;
-
   /// Customizes button's width.
   final bool isFullWidth;
+
+  /// Customizes this button's appearance.
+  /// Null by default.
+  final Color? backgroundColor;
 
   const UIFullFillButton({
     super.key,
     this.onPressed,
     this.child,
-    this.style,
+    this.backgroundColor,
     this.isFullWidth = false,
   });
 
   @override
   Widget build(BuildContext context) {
+    ButtonStyle style = ElevatedButton.styleFrom(
+      backgroundColor: backgroundColor,
+    );
     return FullWidthWrapper(
       isFullWidth: isFullWidth,
       child: ElevatedButton(
         onPressed: onPressed,
-        style: style ?? AppButtonStyle.fullFillButtonStyle,
+        style: style.merge(AppButtonStyle.fullFillButtonStyle),
         child: child,
       ),
     );

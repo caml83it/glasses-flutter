@@ -144,6 +144,12 @@ class UIColors {
 
   static final Color primary = HexColor.fromHex("#1C79C1");
   static final Color primaryColor = HexColor.fromHex("#1C77BE");
+  static final Color background = HexColor.fromHex("#F7F9FB");
+  static final Color hint = HexColor.fromHex("#B9B9B9");
+  static final Color text = HexColor.fromHex("#3A3A3C");
+  static final Color title = HexColor.fromHex("#636366");
+  static final Color enableBorder = HexColor.fromHex("#EDEDF2");
+  static final Color focusBorder = HexColor.fromHex("#1C77BE");
 }
 
 extension HexColor on Color {

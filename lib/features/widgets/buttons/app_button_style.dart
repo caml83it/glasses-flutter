@@ -11,6 +11,8 @@ class AppButtonStyle {
         borderRadius: BorderRadius.circular(UISizes.square.r12),
       ),
       fixedSize: Size(double.infinity, UISizes.height.h48),
+      elevation: 0,
+      shadowColor: Colors.transparent,
     );
   }
 
@@ -21,6 +23,8 @@ class AppButtonStyle {
         borderRadius: BorderRadius.circular(UISizes.square.r12),
       ),
       fixedSize: Size(double.infinity, UISizes.height.h48),
+      elevation: 0,
+      shadowColor: Colors.transparent,
       side: BorderSide(
         width: 1.0,
         color: UIColors.white,

@@ -1,0 +1,43 @@
+import 'package:flutter/cupertino.dart';
+import 'package:glasses/generated/l10n.dart';
+
+extension AppTexts on BuildContext {
+  String get helloWorld => S.of(this).helloWorld;
+  String get login => S.of(this).login;
+  String get register => S.of(this).register;
+  String get whoAreYou => S.of(this).whoAreYou;
+  String get client => S.of(this).client;
+  String get technician => S.of(this).technician;
+  String get collaborator => S.of(this).collaborator;
+  String get continuation => S.of(this).continuation;
+  String get fullName => S.of(this).fullName;
+  String get phoneNumber => S.of(this).phoneNumber;
+  String get email => S.of(this).email;
+  String get password => S.of(this).password;
+  String get confirmPassword => S.of(this).confirmPassword;
+  String get referralCode => S.of(this).referralCode;
+  String get pleaseEntering => S.of(this).pleaseEntering;
+  String get alreadyHaveAnAccount => S.of(this).alreadyHaveAnAccount;
+  String get signInNow => S.of(this).signInNow;
+  String get currentAddress => S.of(this).currentAddress;
+  String get expertise => S.of(this).expertise;
+  String get description => S.of(this).description;
+  String get citizenIdImage => S.of(this).citizenIdImage;
+  String get citizenIdHint => S.of(this).citizenIdHint;
+  String get personalImages => S.of(this).personalImages;
+  String get note => S.of(this).note;
+  String get noteOne => S.of(this).noteOne;
+  String get noteTwo => S.of(this).noteTwo;
+  String get personalImageWarning => S.of(this).personalImageWarning;
+  String get gender => S.of(this).gender;
+  String get birthday => S.of(this).birthday;
+  String get cityOfWork => S.of(this).cityOfWork;
+  String get districtOfWork => S.of(this).districtOfWork;
+  String get yourselfDescription => S.of(this).yourselfDescription;
+  String get signIn => S.of(this).signIn;
+  String get username => S.of(this).username;
+  String get forgotPassword => S.of(this).forgotPassword;
+  String get dontHaveAnAccount => S.of(this).dontHaveAnAccount;
+  String get signUpNow => S.of(this).signUpNow;
+  String get or => S.of(this).or;
+}
