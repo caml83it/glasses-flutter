@@ -5,9 +5,13 @@ import 'package:glasses/features/shared/ui_colors.dart';
 import 'package:glasses/features/shared/ui_sizes.dart';
 import 'package:glasses/features/shared/ui_svgs.dart';
 import 'package:glasses/features/widgets/buttons/buttons.dart';
+import 'package:glasses/features/widgets/labels/ui_text.dart';
+import 'package:glasses/generated/l10n.dart';
+
+part 'splash_screen_mixin.dart';
 
 @RoutePage()
-class SplashScreen extends StatelessWidget {
+class SplashScreen extends StatelessWidget with SplashScreenMixin {
   const SplashScreen({super.key});
 
   @override
@@ -52,26 +56,20 @@ class SplashScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     UIFullFillButton(
-                      onPressed: () {},
+                      onPressed: onLoginPressed,
                       isFullWidth: true,
-                      child: Text(
-                        "Dang nhap",
-                        style: TextStyle(
-                          color: UIColors.primary,
-                          fontSize: UISizes.font.sp14,
-                        ),
+                      child: UIText(
+                        title: S.of(context).login,
+                        titleColor: UIColors.primary,
                       ),
                     ),
                     SizedBox(height: UISizes.height.h16),
                     UIOutlinedButton(
-                      onPressed: () {},
+                      onPressed: onRegisterPressed,
                       isFullWidth: true,
-                      child: Text(
-                        "Dang nhap",
-                        style: TextStyle(
-                          color: UIColors.white,
-                          fontSize: UISizes.font.sp14,
-                        ),
+                      child: UIText(
+                        title: S.of(context).register,
+                        titleColor: UIColors.white,
                       ),
                     ),
                   ],
@@ -83,4 +81,10 @@ class SplashScreen extends StatelessWidget {
       ),
     );
   }
+
+  @override
+  void onLoginPressed() {}
+
+  @override
+  void onRegisterPressed() {}
 }
